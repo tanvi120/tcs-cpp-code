@@ -1,0 +1,33 @@
+Problem Statement: Given two numbers. Find the greatest of two numbers.
+
+#include<bits/stdc++.h>>
+using namespace std;
+int main(){
+  double a,b;
+ 
+  cin>>a>>b;
+  if(a>b){
+    cout<<a;
+  }
+  else{
+    cout<<"The greatest of the two numbers is "<<b;
+  }
+}
+
+
+
+
+Or
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+  double a,b;
+  cin>>a>>b;
+  cout<<"the greatest number is "<<max(a,b);
+}
+
+
+// Time Complexity: O(1).
+
+// Space Complexity: O(1).
