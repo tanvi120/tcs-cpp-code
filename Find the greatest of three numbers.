@@ -1,0 +1,38 @@
+Problem Statement: Given three numbers. Find the greatest of three numbers.
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+  double a,b,c;
+  cin>>a>>b>>c;
+  if(a>b){
+    if(a>c){
+      cout<<a;
+    }
+    else{
+      cout<<c;
+    }
+  }
+    else if(b>c){
+      cout<<b;
+    }
+  else{
+    cout<<c;
+  }
+  
+}
+
+
+Or
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+  double a,b,c;
+  cin>>a>>b>>c;
+  cout<<"the greatest number is "<<max(a,(b,c));
+}
+
+//Time Complexity: O(1).
+// Space Complexity: O(1)
+
