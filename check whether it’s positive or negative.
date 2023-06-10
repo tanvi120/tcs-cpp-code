@@ -1,0 +1,17 @@
+Problem statement: Given a number n check whether it’s positive or negative.
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+  int n;
+  cin>>n;
+  if(n>=0){
+    cout<<"positive";
+  }
+  else{
+    cout<<"negative";
+  }
+}
+
+Time complexity: O(1)
+Space Complexity: O(1)
