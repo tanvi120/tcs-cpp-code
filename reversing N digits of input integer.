@@ -1,0 +1,48 @@
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+  int n,num,digit,reverse=0;
+  cin>>num;
+  n=num;
+  while(num>0){
+    digit=num%10;
+    reverse=(reverse*10)+digit;
+    num=num/10;
+  }
+  if(n==reverse){
+    cout<<"palindrome";
+  }
+  else{
+    cout<<"not palindrome";
+  }
+}
+
+Code explanation
+#include<bits/stdc++.h>: This line includes the necessary libraries for the program.
+using namespace std;: This line allows us to use the standard namespace without explicitly specifying it for each element we use.
+int main() { ... }: This is the main function where the execution of the program begins.
+int n, num, digit, reverse = 0;: Here, four variables are declared.
+n is used to store the original number.
+num is used to take input from the user.
+digit is used to store the last digit of num in each iteration.
+reverse is used to store the reversed number.
+cin >> num;: This line reads an integer from the user and stores it in the num variable.
+n = num;: The value of num is stored in n to compare it with the reversed number later.
+while (num != 0) { ... }: This is a while loop that runs until the value of num becomes 0.
+Inside the loop:
+digit = num % 10;: The remainder of num divided by 10 gives the last digit of num, which is stored in the digit variable.
+reverse = (reverse * 10) + digit;: The reverse variable is updated by multiplying its current value by 10 and adding the value of digit.
+num = num / 10;: num is divided by 10 to discard the last digit, preparing it for the next iteration.
+Essentially, the loop extracts the last digit from num in each iteration and constructs the reversed number in the reverse variable.
+if (n == reverse) { ... }: After the loop ends, the original number (n) is compared with the reversed number (reverse) to check if they are equal.
+Inside the if-else statement:
+cout << "palindrome";: If the original number and the reversed number are the same, it means the number is a palindrome. Hence, "palindrome" is printed.
+cout << "not palindrome";: If the original number and the reversed number are different, it means the number is not a palindrome. Hence, "not palindrome" is printed.
+The logic behind the code is to reverse the given number and then compare it with the original number to determine if it is a palindrome. If they are equal, the number is a palindrome; otherwise, it is not.
+
+Time Complexity: O(logN) for reversing N digits of input integer.
+Space Complexity: O(1)
+The time complexity of the code is O(logN) because the number of iterations in the while loop is determined by the number of digits in the input integer. In each iteration, the number num is divided by 10, effectively reducing the number of digits by one. Therefore, the loop runs for logN times, where N is the number of digits in the input integer.
+The space complexity is O(1) because the code uses a constant amount of extra space regardless of the input size. The variables n, num, digit, and reverse are the only variables used, and they occupy a fixed amount of memory irrespective of the input. Hence, the space complexity is constant or O(1).
+
