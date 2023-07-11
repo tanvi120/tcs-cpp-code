@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+void printArray(int arr[],int n){
+for(int i=0;i<n;i++){
+    cout<<arr[i]<<" ";
+}cout<<endl;
+
+}
+void swapAlt(int arr[],int size){
+    for(int i=0;i<size;i=i+2){
+        swap(arr[i], arr[i+1]);
+    }
+}
+
+
+int main(){
+    int even[6]={ 3,4,2,6,7,1};
+    int odd[5]={ 4,2,6,7,1};
+     swapAlt(even,6);
+     printArray(even,6);
+   swapAlt(odd,5);
+     printArray(odd,5); 
+}
